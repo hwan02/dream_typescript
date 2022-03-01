@@ -1,28 +1,7 @@
-console.log(this);
-
-function simpleFunc() {
-    console.log(this);
+export function add(a, b) {
+    return a + b;
 }
 
-simpleFunc();
-
-class Counter {
-    count = 0;
-    increase = () => {
-        console.log(this);
-    }
+export function print() {
+    return '123';
 }
-
-const counter = new Counter();
-counter.increase();
-const caller = counter.increase;
-// const caller = counter.increase.bind(counter);
-caller();
-
-class Bob {
-
-}
-
-const bob = new Bob();
-bob.run = counter.increase;
-bob.run();

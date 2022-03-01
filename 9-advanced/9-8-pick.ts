@@ -6,7 +6,7 @@
         data: string
     };
 
-    type VideoMetaData = Pick<Video, 'id' | 'title'>;
+    type VideoMetaData = Omit<Video, 'id' | 'title' | 'h'>;
     function getVideo(id: string): Video {
         return {
             id,
@@ -18,8 +18,8 @@
 
     function getVideoMetadata(id: string): VideoMetaData {
         return {
-            id,
-            title: 'smimaseng'
+            url: 'http://',
+            data: 'data'
         }
     }
 }
